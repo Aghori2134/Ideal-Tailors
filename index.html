@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ideal Tailors | Men's Wear</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #faf8f4;
+            color: #24211d;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .dropdown-menu {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(12px);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-menu,
+        .dropdown:focus-within .dropdown-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-image {
+            background-image:
+                linear-gradient(to right, rgba(20, 17, 12, 0.02), transparent),
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRI452xSmA6xbQGF1H8AjTbJMPhmfH4pi_RwrNKbuf7-g&s=10');
+            background-size: cover;
+            background-position: center 25%;
+        }
+
+        .collection-image {
+            transition: transform 0.6s ease;
+        }
+
+        .collection-card:hover .collection-image {
+            transform: scale(1.06);
+        }
+
+        .gold {
+            color: #946b36;
+        }
+
+        .gold-bg {
+            background: #946b36;
+        }
+    </style>
+</head>
+
+<body>
+<header class="sticky top-0 z-50 border-b border-stone-200/80 bg-[#faf8f4]/95 backdrop-blur-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+
+        <a href="#home" class="flex items-center gap-3">
+            <i class="ri-scissors-2-line text-3xl"></i>
+            <div>
+                <h2 class="serif text-xl tracking-wider">IDEAL TAILORS</h2>
+                <p class="text-center text-[9px] tracking-[4px]">MEN'S WEAR</p>
+            </div>
+        </a>
+
+        <nav class="hidden items-center gap-7 lg:flex">
+
+            <a href="#home" class="text-sm">Home</a>
+            <div class="dropdown relative">
+                <button class="flex items-center gap-1 py-3 text-sm hover:text-[#946b36]">
+                    About <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="dropdown-menu absolute left-0 top-full w-56 rounded-xl border border-stone-200 bg-white p-3 shadow-xl">
+                    <a href="#story" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Our Story</a>
+                    <a href="#craftsmanship" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Our Craftsmanship</a>
+                    <a href="#why-us" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Why Ideal Tailors</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button class="flex items-center gap-1 py-3 text-sm hover:text-[#946b36]">
+                    Services <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="dropdown-menu absolute left-0 top-full w-60 rounded-xl border border-stone-200 bg-white p-3 shadow-xl">
+                    <a href="#collections" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Custom Suit Tailoring</a>
+                    <a href="#collections" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Shirt Stitching</a>
+                    <a href="#collections" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Trouser Alterations</a>
+                    <a href="#appointment" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Made-to-Measure</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button class="flex items-center gap-1 py-3 text-sm hover:text-[#946b36]">
+                    Collections <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="dropdown-menu absolute left-0 top-full w-56 rounded-xl border border-stone-200 bg-white p-3 shadow-xl">
+                    <a href="#suits" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Suits & Blazers</a>
+                    <a href="#shirts" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Formal Shirts</a>
+                    <a href="#trousers" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Trousers</a>
+                    <a href="#casual" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Casual Wear</a>
+                </div>
+            </div>
+            <div class="dropdown relative">
+                <button class="flex items-center gap-1 py-3 text-sm hover:text-[#946b36]">
+                    Explore <i class="ri-arrow-down-s-line"></i>
+                </button>
+
+                <div class="dropdown-menu absolute right-0 top-full w-52 rounded-xl border border-stone-200 bg-white p-3 shadow-xl">
+                    <a href="#craftsmanship" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Our Process</a>
+                    <a href="#testimonials" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Client Reviews</a>
+                    <a href="#contact" class="block rounded-lg px-4 py-3 text-sm hover:bg-[#f5eee3]">Contact Us</a>
+                </div>
+            </div>
+
+        </nav>
+
+        <a href="#appointment" class="hidden items-center gap-2 rounded-md gold-bg px-5 py-3 text-sm text-white transition hover:bg-[#735027] md:flex">
+            <i class="ri-calendar-line"></i> Book Appointment
+        </a>
+
+        <a href="#mobile-menu" aria-label="Open navigation" class="text-2xl lg:hidden">
+            <i class="ri-menu-3-line"></i>
+        </a>
+    </div>
+    <div id="mobile-menu" class="border-t border-stone-200 bg-white px-6 py-5 lg:hidden">
+        <a href="#home" class="block py-2">Home</a>
+        <a href="#story" class="block py-2">About</a>
+        <a href="#collections" class="block py-2">Collections</a>
+        <a href="#craftsmanship" class="block py-2">Services</a>
+        <a href="#testimonials" class="block py-2">Testimonials</a>
+        <a href="#contact" class="block py-2">Contact</a>
+        <a href="#appointment" class="mt-3 inline-block rounded-md gold-bg px-5 py-3 text-white">Book Appointment</a>
+    </div>
+</header>
+<section id="home" class="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-2 md:items-center md:px-10 md:py-16">
+
+    <div class="py-5 md:py-10">
+        <p class="mb-5 text-xs font-semibold uppercase tracking-[3px] gold">Crafted for the modern man</p>
+
+        <h1 class="serif max-w-xl text-5xl leading-[1.13] tracking-tight md:text-6xl xl:text-7xl">
+            Custom Tailoring for Every Occasion
+        </h1>
+
+        <p class="mt-6 max-w-lg text-sm leading-7 text-stone-600 md:text-base">
+            At Ideal Tailors, we believe that great style is personal.
+            From sharp suits to casual wear, we craft garments that fit
+            your personality, your body, and your life.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-5">
+            <a href="#appointment" class="rounded-md gold-bg px-6 py-4 text-sm text-white transition hover:bg-[#735027]">
+                <i class="ri-calendar-line mr-2"></i>Book Appointment
+            </a>
+
+            <a href="#collections" class="text-sm font-medium transition hover:text-[#946b36]">
+                Explore Collection <i class="ri-arrow-right-line ml-2"></i>
+            </a>
+        </div>
+
+        <div class="mt-10 flex flex-wrap gap-8 border-t border-stone-200 pt-6">
+            <div>
+                <h3 class="serif text-2xl">100%</h3>
+                <p class="mt-1 text-xs text-stone-500">Personalized Fit</p>
+            </div>
+            <div>
+                <h3 class="serif text-2xl">Premium</h3>
+                <p class="mt-1 text-xs text-stone-500">Fabric Selection</p>
+            </div>
+            <div>
+                <h3 class="serif text-2xl">Expert</h3>
+                <p class="mt-1 text-xs text-stone-500">Craftsmanship</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative min-h-[430px] overflow-hidden rounded-t-[180px] rounded-b-2xl bg-[#e9dfd0] md:min-h-[610px]">
+        <div class="hero-image absolute inset-0"></div>
+
+        <div class="absolute bottom-6 left-6 right-6 rounded-xl border border-white/60 bg-white/85 p-5 backdrop-blur-md md:bottom-8 md:left-8 md:right-8">
+            <p class="text-xs uppercase tracking-[2px] gold">The art of dressing well</p>
+            <div class="mt-2 flex items-end justify-between gap-4">
+                <div>
+                    <h3 class="serif text-2xl">Perfect Fit. Better You.</h3>
+                    <p class="mt-1 text-sm text-stone-600">Made for your individual style.</p>
+                </div>
+                <i class="ri-scissors-cut-line text-3xl gold"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="craftsmanship" class="border-y border-stone-200 bg-[#f2ede5]">
+    <div class="mx-auto grid max-w-7xl grid-cols-2 gap-y-8 px-6 py-10 md:grid-cols-4 md:px-10">
+
+        <div class="text-center md:border-r md:border-stone-300">
+            <i class="ri-ruler-line text-3xl"></i>
+            <h3 class="mt-3 font-medium">Perfect Fit</h3>
+            <p class="mt-2 text-xs text-stone-500">Tailored to your shape</p>
+        </div>
+
+        <div class="text-center md:border-r md:border-stone-300">
+            <i class="ri-diamond-line text-3xl"></i>
+            <h3 class="mt-3 font-medium">Premium Fabrics</h3>
+            <p class="mt-2 text-xs text-stone-500">Carefully selected materials</p>
+        </div>
+
+        <div class="text-center md:border-r md:border-stone-300">
+            <i class="ri-scissors-line text-3xl"></i>
+            <h3 class="mt-3 font-medium">Expert Craftsmanship</h3>
+            <p class="mt-2 text-xs text-stone-500">Attention to every detail</p>
+        </div>
+
+        <div class="text-center">
+            <i class="ri-t-shirt-line text-3xl"></i>
+            <h3 class="mt-3 font-medium">Wide Range</h3>
+            <p class="mt-2 text-xs text-stone-500">Suits, shirts and more</p>
+        </div>
+
+    </div>
+</section>
+<section id="collections" class="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-24">
+
+    <div class="grid gap-10 lg:grid-cols-[0.85fr_1.7fr]">
+
+        <div>
+            <p class="text-xs uppercase tracking-[3px] gold">Explore our collection</p>
+            <h2 class="serif mt-4 text-4xl md:text-5xl">Our Collections</h2>
+            <p class="mt-5 max-w-sm text-sm leading-7 text-stone-600">
+                From classic suits to modern casuals, discover
+                tailored clothing for every occasion and style.
+            </p>
+
+            <div class="mt-7">
+                <a href="#suits" class="flex justify-between border-b border-stone-300 py-4 text-sm hover:text-[#946b36]">
+                    Suits & Blazers <i class="ri-arrow-right-line"></i>
+                </a>
+                <a href="#shirts" class="flex justify-between border-b border-stone-300 py-4 text-sm hover:text-[#946b36]">
+                    Shirts <i class="ri-arrow-right-line"></i>
+                </a>
+                <a href="#trousers" class="flex justify-between border-b border-stone-300 py-4 text-sm hover:text-[#946b36]">
+                    Trousers <i class="ri-arrow-right-line"></i>
+                </a>
+                <a href="#casual" class="flex justify-between border-b border-stone-300 py-4 text-sm hover:text-[#946b36]">
+                    Waistcoats & Casual Wear <i class="ri-arrow-right-line"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+
+            <a href="#suits" id="suits" class="collection-card group relative min-h-[430px] overflow-hidden rounded-xl bg-stone-300 sm:row-span-2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3LZP32-xcPvqNxZsakgbNbqDJ9l7eHUwWKeVcqzidSw&s=10" alt="Men's tailored suit" class="collection-image absolute inset-0 h-full w-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                    <h3 class="serif text-3xl">Suits & Blazers</h3>
+                    <p class="mt-2 text-sm text-white/80">Sharp looks. Always.</p>
+                    <span class="mt-5 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/70 transition group-hover:bg-white group-hover:text-black">
+                        <i class="ri-arrow-right-line"></i>
+                    </span>
+                </div>
+            </a>
+
+            <a href="#shirts" id="shirts" class="collection-card group relative min-h-[210px] overflow-hidden rounded-xl bg-stone-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwYHpysls-aRxZpDXCROvOEjUZ77r7CNdQ_t-veEjOIQ&s=10" alt="Men's formal shirts" class="collection-image absolute inset-0 h-full w-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-0 p-5 text-white">
+                    <h3 class="serif text-2xl">Formal Shirts</h3>
+                    <p class="mt-1 text-sm text-white/80">Comfort meets style.</p>
+                </div>
+            </a>
+
+            <a href="#trousers" id="trousers" class="collection-card group relative min-h-[210px] overflow-hidden rounded-xl bg-stone-300">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmtjTPuQBCrpGTYsK1xMMV3Ei4QBH8ytiv8uFQSOZ6dw&s=10" alt="Men's tailored clothing" class="collection-image absolute inset-0 h-full w-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                <div class="absolute bottom-0 p-5 text-white">
+                    <h3 class="serif text-2xl">Trousers</h3>
+                    <p class="mt-1 text-sm text-white/80">Move with confidence.</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+<section id="story" class="bg-[#f0e9df]">
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 md:grid-cols-2 md:px-10 md:py-24">
+
+        <div class="relative">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuEoy5y2pUe7lnCFStmDTuGL5pKNSkuCacdSGodNtR_Q&s=10" alt="Men's fashion and tailoring" class="h-[380px] w-full rounded-2xl md:h-[480px]">
+            <div class="absolute -bottom-5 -right-3 rounded-xl bg-white p-5 shadow-lg md:-right-5">
+                <i class="ri-scissors-2-line text-3xl gold"></i>
+                <p class="serif mt-2 text-lg">Made with precision</p>
+            </div>
+        </div>
+
+        <div id="why-us" class="pt-5">
+            <p class="text-xs uppercase tracking-[3px] gold">Why choose us</p>
+            <h2 class="serif mt-4 text-4xl leading-tight md:text-5xl">More Than Just Tailoring</h2>
+            <p class="mt-6 text-sm leading-7 text-stone-600">
+                We don't just stitch clothes, we help you express your
+                personality through style. With carefully selected fabrics,
+                skilled craftsmanship and a personal approach, every detail
+                is considered to create a look that feels like you.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-6">
+                <div>
+                    <i class="ri-award-line text-2xl gold"></i>
+                    <h3 class="mt-3 font-medium">Premium Quality</h3>
+                    <p class="mt-2 text-xs leading-5 text-stone-500">Thoughtful fabric selection.</p>
+                </div>
+                <div>
+                    <i class="ri-shield-check-line text-2xl gold"></i>
+                    <h3 class="mt-3 font-medium">Expert Service</h3>
+                    <p class="mt-2 text-xs leading-5 text-stone-500">Care at every step.</p>
+                </div>
+                <div>
+                    <i class="ri-user-heart-line text-2xl gold"></i>
+                    <h3 class="mt-3 font-medium">Personalized Fit</h3>
+                    <p class="mt-2 text-xs leading-5 text-stone-500">Your style, your measurements.</p>
+                </div>
+                <div>
+                    <i class="ri-heart-line text-2xl gold"></i>
+                    <h3 class="mt-3 font-medium">Lasting Value</h3>
+                    <p class="mt-2 text-xs leading-5 text-stone-500">Made to wear with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="casual" class="mx-auto max-w-7xl px-6 py-16 md:px-10 md:py-20">
+    <div class="grid overflow-hidden rounded-2xl bg-[#e4d7c4] md:grid-cols-2">
+        <div class="flex flex-col justify-center p-8 md:p-14">
+            <p class="text-xs uppercase tracking-[3px] gold">Beyond the ordinary</p>
+            <h2 class="serif mt-4 text-4xl leading-tight md:text-5xl">Your Everyday Style, Tailored.</h2>
+            <p class="mt-5 text-sm leading-7 text-stone-600">
+                Smart casuals, comfortable shirts and versatile essentials
+                designed to fit effortlessly into your everyday life.
+            </p>
+            <a href="#appointment" class="mt-7 inline-flex w-fit items-center gap-3 border-b border-[#946b36] pb-2 text-sm font-medium">
+                Find Your Style <i class="ri-arrow-right-line"></i>
+            </a>
+        </div>
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo9LhHfHmLJrHCFMSx-zeTx0fLFtx3-1oNsMp9MKHlmA&s=10" alt="Contemporary men's casual fashion" class="h-72 w-full object-cover md:h-full">
+    </div>
+</section>
+<section id="testimonials" class="border-t border-stone-200 bg-[#f6f3ee]">
+    <div class="mx-auto max-w-7xl px-6 py-20 md:px-10">
+
+        <p class="text-xs uppercase tracking-[3px] gold">Testimonials</p>
+        <div class="mt-3 flex flex-wrap items-end justify-between gap-5">
+            <h2 class="serif text-4xl md:text-5xl">What Our Clients Say</h2>
+            <p class="text-sm text-stone-500">Style that speaks for itself.</p>
+        </div>
+
+        <div class="mt-10 grid gap-5 md:grid-cols-3">
+
+            <div class="rounded-xl border border-stone-200 bg-white p-7 shadow-sm">
+                <div class="gold text-3xl">“</div>
+                <p class="text-sm leading-7 text-stone-600">
+                    The fit and quality are exactly what I was looking for.
+                    The attention to detail makes a real difference.
+                </p>
+                <div class="mt-6 flex items-center justify-between gap-3">
+                    <div>
+                        <h3 class="font-semibold">Rohan Mehta</h3>
+                        <p class="text-xs text-stone-500">Business Professional</p>
+                    </div>
+                    <div class="gold text-sm">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="rounded-xl border border-stone-200 bg-white p-7 shadow-sm">
+                <div class="gold text-3xl">“</div>
+                <p class="text-sm leading-7 text-stone-600">
+                    Great craftsmanship and a comfortable fit.
+                    The whole experience felt personal and professional.
+                </p>
+                <div class="mt-6 flex items-center justify-between gap-3">
+                    <div>
+                        <h3 class="font-semibold">Vikram Singh</h3>
+                        <p class="text-xs text-stone-500">Entrepreneur</p>
+                    </div>
+                    <div class="gold text-sm">★★★★★</div>
+                </div>
+            </div>
+
+            <div class="rounded-xl border border-stone-200 bg-white p-7 shadow-sm">
+                <div class="gold text-3xl">“</div>
+                <p class="text-sm leading-7 text-stone-600">
+                    A wonderful option for custom clothing.
+                    I appreciate the service and the care in every detail.
+                </p>
+                <div class="mt-6 flex items-center justify-between gap-3">
+                    <div>
+                        <h3 class="font-semibold">Aarav Sharma</h3>
+                        <p class="text-xs text-stone-500">Customer</p>
+                    </div>
+                    <div class="gold text-sm">★★★★★</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<section id="appointment" class="px-6 py-16 md:px-10 md:py-20">
+    <div class="mx-auto max-w-5xl rounded-2xl bg-[#30291f] px-6 py-12 text-center text-white md:px-16 md:py-16">
+        <i class="ri-scissors-cut-line text-4xl text-[#d9b681]"></i>
+        <p class="mt-5 text-xs uppercase tracking-[3px] text-[#d9b681]">Your style journey starts here</p>
+        <h2 class="serif mt-4 text-4xl md:text-5xl">Let's Create Your Perfect Fit</h2>
+        <p class="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/70">
+            Discover personalized tailoring designed around your measurements,
+            preferences and occasions.
+        </p>
+        <a href="#contact" class="mt-8 inline-flex items-center gap-3 rounded-md bg-[#d6b27b] px-7 py-4 text-sm font-semibold text-[#30291f] transition hover:bg-white">
+            Get in Touch <i class="ri-arrow-right-line"></i>
+        </a>
+    </div>
+</section>
+<footer id="contact" class="border-t border-stone-200 bg-[#f2ede5]">
+    <div class="mx-auto grid max-w-7xl gap-10 px-6 py-12 md:grid-cols-4 md:px-10">
+
+        <div class="md:col-span-1">
+            <a href="#home" class="flex items-center gap-3">
+                <i class="ri-scissors-2-line text-3xl"></i>
+                <div>
+                    <h2 class="serif text-lg tracking-wider">IDEAL TAILORS</h2>
+                    <p class="text-[9px] tracking-[3px]">MEN'S WEAR</p>
+                </div>
+            </a>
+            <p class="mt-5 max-w-xs text-sm leading-6 text-stone-600">
+                Thoughtful tailoring for men who appreciate quality,
+                confidence and timeless style.
+            </p>
+        </div>
+
+        <div>
+            <h3 class="font-semibold">Quick Links</h3>
+            <a href="#home" class="mt-4 block text-sm text-stone-600 hover:text-[#946b36]">Home</a>
+            <a href="#story" class="mt-3 block text-sm text-stone-600 hover:text-[#946b36]">About Us</a>
+            <a href="#collections" class="mt-3 block text-sm text-stone-600 hover:text-[#946b36]">Collections</a>
+            <a href="#testimonials" class="mt-3 block text-sm text-stone-600 hover:text-[#946b36]">Testimonials</a>
+        </div>
+
+        <div>
+            <h3 class="font-semibold">Our Services</h3>
+            <a href="#suits" class="mt-4 block text-sm text-stone-600 hover:text-[#946b36]">Suits & Blazers</a>
+            <a href="#shirts" class="mt-3 block text-sm text-stone-600 hover:text-[#946b36]">Formal Shirts</a>
+            <a href="#trousers" class="mt-3 block text-sm text-stone-600 hover:text-[#946b36]">Trousers</a>
+            <a href="#casual" class="mt-3 block text-sm text-stone-600 hover:text-[#946b36]">Casual Wear</a>
+        </div>
+
+        <div>
+            <h3 class="font-semibold">Get in Touch</h3>
+            <p class="mt-4 text-sm text-stone-600">
+                <i class="ri-map-pin-line mr-2 gold"></i>Visit our tailoring studio
+            </p>
+            <p class="mt-3 text-sm text-stone-600">
+                <i class="ri-mail-line mr-2 gold"></i>Contact us for inquiries
+            </p>
+            <div class="mt-5 flex gap-4 text-xl">
+                <a href="#contact" aria-label="Instagram" class="hover:text-[#946b36]"><i class="ri-instagram-line"></i></a>
+                <a href="#contact" aria-label="Facebook" class="hover:text-[#946b36]"><i class="ri-facebook-fill"></i></a>
+                <a href="#contact" aria-label="YouTube" class="hover:text-[#946b36]"><i class="ri-youtube-line"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="border-t border-stone-300 px-6 py-5 text-center text-xs text-stone-500">
+        © 2026 Ideal Tailors. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
